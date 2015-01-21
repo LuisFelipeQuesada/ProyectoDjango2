@@ -1,0 +1,138 @@
+html { 
+	height:100%;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	margin:0 auto;
+	background-color:#6495ED;
+}
+
+p {
+	margin:0px;
+	padding:0px;
+	font-family:arial;
+	font-size:16px;
+}
+
+h1 {
+	font-family:arial;
+	font-size:24px;
+}
+
+#wrapper {
+	height: 97%;
+	width: 65%;
+	margin:0 auto;
+	padding-top:1%;
+	padding-left:5%;
+	padding-right:5%;
+	background-color:#fff;
+}
+
+#form {
+	float:left;
+	padding-top:6px;
+	padding-left:20px;
+	padding-right:20px;
+	margin:0 auto;
+}
+
+#direction {
+	float:left;
+	padding-top:6px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#menu {
+	margin:0 auto;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:15px;
+	padding-bottom:15px;
+	width:90%;
+	background-color:#800000;
+	clear:both;
+	border-bottom: 1px solid #000;
+}
+
+a {
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:15px 20px;
+	width:150px;
+	color:#000;
+	font-family:arial;
+	font-size:15px;
+	text-decoration:none;
+}
+
+#menuLink {
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:15px 20px;
+	width:150px;
+	color:#fff;
+	font-family:arial;
+	font-size:15px;
+	text-decoration:none;
+}
+
+#menuLink:hover {
+	color:#800000;
+}
+
+a:hover {
+	color:#800000;
+	background-color:#fff;
+}
+
+#map_canvas {
+	float:left;
+	padding-left:20px;
+	width:50%;
+	height:70%;
+	margin:0 auto;
+}
+
+.input {
+	padding:22px;
+	display:table-row;
+}
+
+.text {
+	border: solid 1px #4682B4;
+	padding:5px;
+	display:table-cell;
+}
+
+.errorlist {
+	padding:1px;
+}
+
+.text:hover {
+	border: solid 1px #DAA520;
+}
+
+.label {
+	font-family:arial;
+	color: ;
+	padding:15px;
+	display:table-cell;
+}
+
+.button {
+	padding:5px;
+}
+
+#button {
+	float:right;
+}
+

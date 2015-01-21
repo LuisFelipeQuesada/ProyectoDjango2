@@ -1,0 +1,65 @@
+html { 
+	height:100%;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	margin:0 auto;
+	background-color:#fff;
+}
+
+p {
+	margin:0px;
+	padding:0px;
+}
+
+#wrapper {
+	height: 85%;
+	width: 85%;
+	margin:0 auto;
+	padding-top:3%;
+	padding-left:5%;
+	padding-right:5%;
+}
+
+#form {
+	float:left;
+	padding-right:10px;
+}
+
+#direction {
+	float:left;
+	padding-top:5px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#map_canvas {
+	float:left;
+	padding-left:10px;
+}
+
+.input {
+	padding:22px;
+	display:table-row;
+}
+
+.text {
+	border: solid 1px #4682B4;
+	padding:5px;
+	display:table-cell;
+}
+
+.text:hover {
+	border: solid 1px #DAA520;
+}
+
+.label {
+	font-family:arial;
+	color: ;
+	padding:15px;
+	display:table-cell;
+}
+

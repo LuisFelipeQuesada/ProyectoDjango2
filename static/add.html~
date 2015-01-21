@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		{% load staticfiles %}
+		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<script type="text/javascript"
+			src="http://maps.google.com/maps/api/js?key=AIzaSyAqquaXVEysM4siIQGr1VAUKIqTrKW16kQ&sensor=false" >
+		</script>
+		{% load staticfiles %}
+		<script src="{{ STATIC_URL }}js/maps.js"></script>
+<!--			var geocoder;-->
+<!--			var map;-->
+<!--			-->
+<!--			function initialize() {-->
+<!--				geocoder = new google.maps.Geocoder();-->
+<!--				var myOptions = {-->
+<!--					zoom: 7,-->
+<!--					center: new google.maps.LatLng(9.75, -84),-->
+<!--					mapTypeId: google.maps.MapTypeId.ROADMAP-->
+<!--				};-->
+<!--				map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);-->
+<!--			}-->
+<!--	-->
+<!--		  	function codeAddress() {-->
+<!--				var address = document.getElementById("address").value;-->
+<!--					geocoder.geocode( { 'address': address}, function(results, status) {-->
+<!--					if (status == google.maps.GeocoderStatus.OK) {-->
+<!--						map.setCenter(results[0].geometry.location);-->
+<!--						var marker = new google.maps.Marker({-->
+<!--							map: map,-->
+<!--							position: results[0].geometry.location-->
+<!--						});-->
+<!--					}-->
+<!--					else {-->
+<!--						alert("Geocode was not successful for the following reason: " + status);-->
+<!--					}-->
+<!--				});-->
+<!--			}-->
+<!--		</script>-->
+<!--		<style>-->
+<!--			html { -->
+<!--				height:100%;-->
+<!--			}-->
+
+<!--			body {-->
+<!--				height: 100%;-->
+<!--				margin: 0px;-->
+<!--				padding: 0px;-->
+<!--				margin:0 auto;-->
+<!--				background-color:#fff;-->
+<!--			}-->
+<!--			-->
+<!--			p {-->
+<!--				margin:0px;-->
+<!--				padding:0px;-->
+<!--			}-->
+<!--			-->
+<!--			#wrapper {-->
+<!--				height: 85%;-->
+<!--				width: 85%;-->
+<!--				margin:0 auto;-->
+<!--				padding-top:3%;-->
+<!--				padding-left:5%;-->
+<!--				padding-right:5%;-->
+<!--			}-->
+<!--			-->
+<!--			#form {-->
+<!--				float:left;-->
+<!--				padding-right:10px;-->
+<!--			}-->
+<!--			-->
+<!--			#direction {-->
+<!--				float:left;-->
+<!--				padding-left:10px;-->
+<!--				padding-right:10px;-->
+<!--			}-->
+<!--			-->
+<!--			#map_canvas {-->
+<!--				float:left;-->
+<!--				padding-left:10px;-->
+<!--			}-->
+<!--			-->
+<!--			.input {-->
+<!--				padding:22px;-->
+<!--				display:table-row;-->
+<!--			}-->
+<!--			-->
+<!--			.text {-->
+<!--				border: solid 1px #4682B4;-->
+<!--				padding:5px;-->
+<!--				display:table-cell;-->
+<!--			}-->
+<!--			-->
+<!--			.text:hover {-->
+<!--				border: solid 1px #DAA520;-->
+<!--			}-->
+<!--			-->
+<!--			.label {-->
+<!--				font-family:arial;-->
+<!--				color: ;-->
+<!--				padding:15px;-->
+<!--				display:table-cell;-->
+<!--			}-->
+<!--		</style>-->
+	</head>
+	<body  onload="initialize()">
+		<div id="wrapper">
+			<div id="form">
+				<form action="/create/" method="post">{% csrf_token %}
+					<div class="input">
+						<label class="label" >Nombre: </label>
+						<input class="text" type="text" />
+					</div>
+					<div class="input">
+						<label class="label" >Apellidos: </label>
+						<input class="text" type="text" />
+					</div>
+					<div class="input">
+						<label class="label" >Teléfono: </label>
+						<input class="text" type="text" />
+					</div>
+					<div class="input">
+						<label class="label" >Edad: </label>
+						<input class="text" type="text" />
+					</div>
+					<div class="input">
+						<label class="label" >Empresa: </label>
+						<input class="text" type="text" />
+					</div>
+					<div class="input">
+						<label class="label" >Correo Electrónico: </label>
+						<input class="text" type="text" />
+					</div>
+					<div class="input">
+						<input id="button" type="submit" value="Agregar" />
+					</div>
+				</form>
+			</div>
+			<div id="direction">
+				<input id="address" type="textbox">
+				<input type="button" value="Ubicar" onclick="codeAddress()">
+			</div>
+			<div id="map_canvas" style="width:35%; height:60%; margin:0 auto;"></div>
+		</div>
+	</body>
+</html>

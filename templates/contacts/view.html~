@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load staticfiles %}
+		<link href="{{ STATIC_URL }}css/view.css" rel="stylesheet" type="text/css" media="all" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="menu">
+				{% url contacts.views.index as indexC %}
+				<a id="menuLink" href="{{ indexC }}">Inicio</a>
+				{% url contacts.views.add as addC %}
+				<a id="menuLink" href="{{ addC }}">Volver</a>
+			</div>
+			<div id="table">
+				<table>
+					<tr>
+						<th> Nombre </th>
+						<th> Teléfono </th>
+						<th> Correo Electronico </th>
+						<th> Opciones </th>
+					</tr>
+					{% if contacts %}
+						{% for contact in contacts %}
+							<tr>
+								<td> {{ contact.name }} {{ contact.lastName }} </td>
+								<td> {{ contact.phone }} </td>
+								<td> {{ contact.email }} </td>
+								<td>
+									<a href="{{ contact.id }}/edit">Editar</a> |
+									<a href="{{ contact.id }}/viewContact">Ver</a> | 
+									<a href="{{ contact.id }}/delete">Ver</a>
+								</td>
+							</tr>
+						{% endfor %}
+					{% else %}
+						<p>No hay contactos para mostrar</p>
+					{% endif %}
+				</table>
+			</div>
+			<div id="map_canvas">
+			</div>
+		</div>
+	</body>
+</html>
+

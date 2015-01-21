@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load staticfiles %}
+		<link href="{{ STATIC_URL }}css/viewContact.css" rel="stylesheet" type="text/css" media="all" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="menu">
+				{% url contacts.views.index as indexC %}
+				<a id="menuLink" href="{{ indexC }}">Inicio</a>
+				{% url contacts.views.view as viewC %}
+				<a id="menuLink" href="{{ viewC }}">Volver</a>
+			</div>
+			<div id="info">
+				{% if contact %}
+					<p><span>Nombre:</span> {{ contact.name }}</p>
+					<p><span>Apellido:</span> {{ contact.lastName }}</p>
+					<p><span>Teléfono:</span> {{ contact.phone }}</p>
+					<p><span>Edad:</span> {{ contact.age }}</p>
+					<p><span>Correo Electrónico:</span> {{ contact.email }}</p>
+					<p><span>Empresa:</span> {{ contact.business }}</p>
+				{% else %}
+					<p>No hay información del contacto</p>
+				{% endif %}
+			</div>
+		</div>
+	</body>
+</html>
+
